@@ -1,0 +1,147 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+    width: 100%;
+    height: auto;
+    min-height: 100%;
+    font-family: "Barlow Semi Condensed", sans-serif;
+    font-size: 16px;
+}
+
+:root {
+    --moderate_violet: hsl(263, 55%, 52%);
+    --very_dark_grayish_blue: hsl(217, 19%, 35%);
+    --very_dark_blackish_blue: hsl(219, 29%, 14%);
+    --white: hsl(0, 0%, 100%);
+    --light_gray: hsl(0, 0%, 81%);
+    --light_grayish_blue: hsl(210, 46%, 95%);
+    --content_width: 77vw;
+}
+
+main {
+    width: 100%;
+    height: auto;
+    min-height: 100vh;
+    background-color: var(--light_grayish_blue);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    height: auto;
+    min-height: 100%;
+    width: var(--content_width);
+
+}
+
+.testinomials {
+    display: grid;
+    grid-template: repeat(2, minmax(15rem, 1fr)) / 1fr 1fr 1fr 1fr;
+    gap: 1.5rem;
+}
+
+.testimonial {
+    display: flex;
+    flex-flow: column nowrap;
+    padding: 1.5rem 2rem 2rem 2rem;
+    border-radius: .5rem;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: flex-start;
+    box-shadow: 0 0 .1rem .01rem var(--light_gray);
+}
+
+.testimonial_person {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    gap: 1rem;
+}
+
+.testimonial_person img {
+    width: 1.75rem;
+    height: 1.75rem;
+    border-radius: 50%;
+}
+
+.info {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: .2rem;
+}
+
+.info h2 {
+    font-size: 0.8125rem;
+    line-height: 100%;
+}
+
+.info span {
+    display: block;
+    font-size: 0.6875rem;
+    line-height: 100%;
+    opacity: 0.5;
+}
+
+.testimonial_title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    text-align: left;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.testimonial_desc {
+    font-size: 0.8125rem;
+    line-height: 140%;
+    opacity: 0.5;
+}
+
+.card1 {
+    grid-area: 1/1/2/3;
+    background-color: var(--moderate_violet);
+    color: white;
+}
+
+.card2 {
+    grid-area: 1/3/2/4;
+    background-color: var(--very_dark_grayish_blue);
+    color: white;
+}
+
+.card5 {
+    grid-area: 1/4/3/5;
+    background-color: var(--white);
+    color: var(--very_dark_grayish_blue);
+
+}
+
+.card4 {
+    grid-area: 2/2/3/4;
+    background-color: var(--very_dark_blackish_blue);
+    color: var(--white);
+
+}
+
+.card3 {
+    grid-area: 2/1/3/2;
+    background-color: var(--white);
+    color: var(--very_dark_grayish_blue);
+
+}
+
+@media (max-width: 1023px) {
+    .testinomials {
+        grid-template: 5fr / 1fr;
+    }
+
+    .testimonial {
+        grid-area: span 1;
+    }
+}
